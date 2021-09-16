@@ -11,5 +11,75 @@
     Open the developer console by right clicking anywhere inside the page and selecting
     <strong>Inspect (chrome) or Inspect Element (firefox)</strong>
   </div>
+<script>
+
+//Hello world alert
+var hello= "Hello World";
+
+//Write the hour
+var today = new Date();
+var day = today.getDay();
+var hour = today.getHours();
+	alert(hello);
+	console.log(hello);
+	console.log("Current hour : " + hour);
+
+
+//Sum of 2 numbers + Validate the input
+const num1 = parseInt(prompt('Enter the first number '));
+
+if (isNaN(num1)){
+	alert("The input is not valid");
+}
+else {
+	const num2 = parseInt(prompt('Enter the second number '));
+	const sum = num1 + num2;
+	alert(`The sum of ${num1} and ${num2} is ${sum}`);
+	console.log(`The sum of ${num1} and ${num2} is ${sum}`);
+}
+
+//Write each letter of a word + Get the number of letters in a word
+let word = prompt('Enter a word ');
+console.log(word);
+var len= parseInt(word.length);
+console.log("Length of the word is: " + len);
+for (let i = 0; i < word.length; i++) {
+  
+  console.log(word[i]);
+}
+
+//Write the reverse of word
+function reverseString(str) {
+    var newString = "";
+    for (var i = str.length - 1; i >= 0; i--) {
+        newString += str[i];
+    }
+    return newString;
+}
+const result = reverseString(word);
+console.log(result);
+
+//Sum of odd numbers
+function isOdd(n) {
+  return Boolean(n % 2);
+}
+
+const num3 = parseInt(prompt('Enter a number '));
+
+function sumOdd(no) {
+  let sum = 0;
+
+  for (var i = 0; i < no; i++) {
+    if (isOdd(i)) {
+      sum += i;
+    }
+  }
+  return sum;
+}
+
+const result2 = sumOdd(num3);
+console.log(result2);
+
+</script>
 </body>
 </html>
