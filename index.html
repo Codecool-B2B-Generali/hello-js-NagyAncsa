@@ -67,6 +67,11 @@ function isOdd(n) {
 
 const num3 = parseInt(prompt('Enter a number '));
 
+if (isNaN(num3)){
+	alert("The input is not valid");
+}
+else {
+
 function sumOdd(no) {
   let sum = 0;
 
@@ -80,6 +85,7 @@ function sumOdd(no) {
 
 const result2 = sumOdd(num3);
 console.log(result2);
+}
 
 </script>
 </body>
