@@ -41,11 +41,12 @@ else {
 //Write each letter of a word + Get the number of letters in a word
 let word = prompt('Enter a word ');
 console.log(word);
-var len= parseInt(word.length);
+let withoutspace=word.replace(/\s/g, '')
+var len= parseInt(withoutspace.length);
 console.log("Length of the word is: " + len);
-for (let i = 0; i < word.length; i++) {
+for (let i = 0; i < withoutspace.length; i++) {
   
-  console.log(word[i]);
+  console.log(withoutspace[i]);
 }
 
 //Write the reverse of word
@@ -56,7 +57,7 @@ function reverseString(str) {
     }
     return newString;
 }
-const result = reverseString(word);
+const result = reverseString(withoutspace);
 console.log(result);
 
 //Sum of odd numbers
